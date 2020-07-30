@@ -37,10 +37,19 @@ import sys
 '''
 #sys.stdin = open("input.txt", "r")
 
-T = int(input())
-# 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
-n = T
-numbers = sorted(map(int, input().split()))
-print(numbers[n//2])
-    
 
+# 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
+numbers = input().split()
+P = int(numbers[0])
+K = int(numbers[-1])
+count = 1
+while True:
+    if P == K:
+        print(count)
+        break
+    else:
+        K += 1
+        count += 1
+    
+    
+        

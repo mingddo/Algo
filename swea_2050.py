@@ -37,10 +37,9 @@ import sys
 '''
 #sys.stdin = open("input.txt", "r")
 
-T = int(input())
-# 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
-n = T
-numbers = sorted(map(int, input().split()))
-print(numbers[n//2])
-    
-
+words = input()
+result = ''
+numbers = list(range(1,201))
+for word in words:
+    result = result + str(ord(word) - 64) + ' '
+print(result[:-1])

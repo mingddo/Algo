@@ -39,8 +39,19 @@ import sys
 
 T = int(input())
 # 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
-n = T
-numbers = sorted(map(int, input().split()))
-print(numbers[n//2])
-    
+for test_case in range(1, T + 1):
+    number = input()
+    one = [1, 3, 5, 7, 8, 10, 12]
+    zero = [4, 6, 9, 11]
+    eight = [2]
+    if int(number[4:6]) in one and 0 < int(number[6:]) < 32:
+        print(f'#{test_case} {number[:4]}/{number[4:6]}/{number[6:]}')
 
+    elif int(number[4:6]) in zero and 0 < int(number[6:]) < 31:
+        print(f'#{test_case} {number[:4]}/{number[4:6]}/{number[6:]}')
+
+    elif int(number[4:6]) in eight and 0 < int(number[6:]) < 29:
+        print(f'#{test_case} {number[:4]}/{number[4:6]}/{number[6:]}')
+
+    else:
+        print(f'#{test_case} -1')

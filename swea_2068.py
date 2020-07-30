@@ -39,8 +39,10 @@ import sys
 
 T = int(input())
 # 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
-n = T
-numbers = sorted(map(int, input().split()))
-print(numbers[n//2])
-    
-
+for test_case in range(1, T + 1):
+    numbers = map(int,input().split())
+    max_number = 0
+    for number in numbers:
+        if max_number < number:
+            max_number = number
+    print(f'#{test_case} {max_number}')

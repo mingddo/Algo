@@ -39,8 +39,10 @@ import sys
 
 T = int(input())
 # 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
-n = T
-numbers = sorted(map(int, input().split()))
-print(numbers[n//2])
-    
-
+for test_case in range(1, T + 1):
+    numbers = input().split()
+    a = int(numbers[0])
+    b = int(numbers[-1])
+    mokk = a // b
+    d = a % b
+    print(f'#{test_case} {mokk} {d}')

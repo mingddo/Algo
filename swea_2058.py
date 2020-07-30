@@ -37,10 +37,10 @@ import sys
 '''
 #sys.stdin = open("input.txt", "r")
 
-T = int(input())
+# T = int(input())
 # 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
-n = T
-numbers = sorted(map(int, input().split()))
-print(numbers[n//2])
-    
-
+numbers = input()
+total = 0
+for number in numbers:
+    total += int(number)
+print(total)
