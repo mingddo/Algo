@@ -36,14 +36,20 @@
 
 
 
-number = [-1, 3, -9, 6, 7, -6, 1, 5, 4, -2]
-n = len(number)
-result = []
-for i in range(1<<n):
-    sub = []
-    for j in range(n):
-        if i &(1<<j):
-            sub.append(number[j])
-    if sum(sub) == 0:
-        result.append(sub)
-print(*result)
+# number = [-1, 3, -9, 6, 7, -6, 1, 5, 4, -2]
+# n = len(number)
+# result = []
+# for i in range(1<<n):
+#     sub = []
+#     for j in range(n):
+#         if i &(1<<j):
+#             sub.append(number[j])
+#     if sum(sub) == 0:
+#         result.append(sub)
+# print(*result)
+# a = [1]
+# a[0:0] = [5]
+# print(a[:0]+a[0:0] + a)
+a = [8, 7, 1, 2]
+a = sorted(a)
+print(type(a))
