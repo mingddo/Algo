@@ -1,6 +1,5 @@
-import sys
-
-sys.stdin = open("input (1).txt", "r")
+# import sys
+# sys.stdin = open("input (1).txt", "r")
 def bfs(x, result):
     global max_work
     if result <= max_work:

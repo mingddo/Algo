@@ -3,7 +3,6 @@ sys.stdin = open("input1.txt", "r")
 #idx는 현재 바꿔야하는 자리
 def change(idx, mode):
     global count, index, s_number
-
     s_max = 0
     max_idx = 0
     if count == 0:
@@ -17,8 +16,8 @@ def change(idx, mode):
                 s_max = number[j]
                 max_idx = j
         index.append(max_idx)
-        s_number.append(number[idx])
         number[idx], number[max_idx] = number[max_idx], number[idx]
+        s_number.append(number[max_idx])
         # print(number)
         count -= 1
         return
