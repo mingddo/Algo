@@ -45,11 +45,15 @@ for test_case in range(1, int(input()) + 1):
     cg = [[2, 1, 1], [2, 2, 1], [1, 2, 2], [4, 1, 1], [1, 3, 2],
           [2, 3, 1], [1, 1, 4], [3, 1, 2], [2, 1, 3], [1, 1, 2]]
     N, M = map(int, input().split())
-    temp = [input() for _ in range(N)]
+
+    s_et = set()
+    for _ in range(N):
+        s_et.add(input())
+    t_emp = list(s_et)
     # 0이 아닌게 있는 리스를 찾아서 이진수로 변환해서 저장하기
     bin_num = []
     code = []
-    for tem in temp:
+    for tem in t_emp:
         # 0의 개수와 같지 않으면,,,, 뭔가 저장이 되어있다는 말이니깐 이걸 이진수로 바꾸고 저장해.
         if tem.count('0') != len(tem):
             binay_num = bin(int(tem, 16))[2:]
